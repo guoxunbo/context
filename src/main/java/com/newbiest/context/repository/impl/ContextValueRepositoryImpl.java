@@ -7,15 +7,13 @@ import com.newbiest.base.exception.ExceptionManager;
 import com.newbiest.base.factory.SqlBuilder;
 import com.newbiest.base.factory.SqlBuilderFactory;
 import com.newbiest.base.model.NBVersionControl;
+import com.newbiest.base.threadlocal.ThreadLocalContext;
 import com.newbiest.base.utils.CollectionUtils;
-import com.newbiest.base.utils.SessionContext;
 import com.newbiest.base.utils.StringUtils;
-import com.newbiest.base.utils.ThreadLocalContext;
 import com.newbiest.context.model.Context;
 import com.newbiest.context.model.ContextValue;
 import com.newbiest.context.repository.custom.ContextValueRepositoryCustom;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

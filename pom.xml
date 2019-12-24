@@ -8,11 +8,11 @@
     <groupId>com.newbiest</groupId>
     <artifactId>context</artifactId>
     <description>Context of Newbiest</description>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
-        <newbiest.framework.version>1.0.4.RELEASE</newbiest.framework.version>
+        <newbiest.framework.version>1.0.5.RELEASE</newbiest.framework.version>
         <junit.version>4.12</junit.version>
     </properties>
 

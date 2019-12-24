@@ -3,8 +3,6 @@ package com.newbiest.context.service.impl;
 import com.newbiest.base.exception.ClientException;
 import com.newbiest.base.exception.ClientParameterException;
 import com.newbiest.base.exception.ExceptionManager;
-import com.newbiest.base.utils.SessionContext;
-import com.newbiest.base.utils.ThreadLocalContext;
 import com.newbiest.common.exception.ContextException;
 import com.newbiest.context.model.Context;
 import com.newbiest.context.model.ContextValue;
@@ -15,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.mail.Session;
 import java.util.List;
 
 /**
