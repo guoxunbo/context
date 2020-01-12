@@ -1,5 +1,6 @@
 package com.newbiest.context.model;
 
+import com.google.common.collect.Lists;
 import com.newbiest.base.exception.ClientException;
 import com.newbiest.base.exception.ClientParameterException;
 import com.newbiest.base.utils.CollectionUtils;
