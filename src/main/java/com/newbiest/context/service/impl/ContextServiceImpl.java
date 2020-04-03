@@ -1,5 +1,6 @@
 package com.newbiest.context.service.impl;
 
+import com.newbiest.base.annotation.BaseJpaFilter;
 import com.newbiest.base.exception.ClientException;
 import com.newbiest.base.exception.ClientParameterException;
 import com.newbiest.base.exception.ExceptionManager;
@@ -20,6 +21,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
+@BaseJpaFilter
 public class ContextServiceImpl implements ContextService {
 
     @Autowired

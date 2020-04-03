@@ -9,6 +9,7 @@ import com.newbiest.base.factory.SqlBuilderFactory;
 import com.newbiest.base.model.NBVersionControl;
 import com.newbiest.base.threadlocal.ThreadLocalContext;
 import com.newbiest.base.utils.CollectionUtils;
+import com.newbiest.base.utils.DefaultStatusMachine;
 import com.newbiest.base.utils.StringUtils;
 import com.newbiest.context.model.Context;
 import com.newbiest.context.model.ContextValue;
@@ -40,7 +41,7 @@ public class ContextValueRepositoryImpl implements ContextValueRepositoryCustom 
         try {
             SqlBuilder sqlBuilder = SqlBuilderFactory.createSqlBuilder();
             StringBuffer sqlBuffer = sqlBuilder.selectWithBasedCondition(ContextValue.class, ThreadLocalContext.getOrgRrn())
-                        .mapFieldValue(ImmutableMap.of("contextRrn", context.getObjectRrn(), "status", NBVersionControl.STATUS_ACTIVE))
+                        .mapFieldValue(ImmutableMap.of("contextRrn", context.getObjectRrn(), "status", DefaultStatusMachine.STATUS_ACTIVE))
                         .build();
             if (!StringUtils.isNullOrEmpty(contextValue.getFieldValue1())) {
                 sqlBuffer.append(" AND contextFieldValue1 = '" + contextValue.getFieldValue1() + "'");
