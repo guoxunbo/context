@@ -4,10 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.newbiest.base.exception.ClientException;
 import com.newbiest.base.exception.ExceptionManager;
-import com.newbiest.base.factory.SqlBuilder;
-import com.newbiest.base.factory.SqlBuilderFactory;
-import com.newbiest.base.model.NBVersionControl;
-import com.newbiest.base.threadlocal.ThreadLocalContext;
+import com.newbiest.base.sql.SQLBuilder;
 import com.newbiest.base.utils.CollectionUtils;
 import com.newbiest.base.utils.DefaultStatusMachine;
 import com.newbiest.base.utils.StringUtils;
@@ -39,8 +36,8 @@ public class ContextValueRepositoryImpl implements ContextValueRepositoryCustom 
      */
     public List<ContextValue> getContextValue(Context context, ContextValue contextValue) throws ClientException {
         try {
-            SqlBuilder sqlBuilder = SqlBuilderFactory.createSqlBuilder();
-            StringBuffer sqlBuffer = sqlBuilder.selectWithBasedCondition(ContextValue.class, ThreadLocalContext.getOrgRrn())
+
+            StringBuffer sqlBuffer = SQLBuilder.newInstance().selectEntity(ContextValue.class)
                         .mapFieldValue(ImmutableMap.of("contextRrn", context.getObjectRrn(), "status", DefaultStatusMachine.STATUS_ACTIVE))
                         .build();
             if (!StringUtils.isNullOrEmpty(contextValue.getFieldValue1())) {
