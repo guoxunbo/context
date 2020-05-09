@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class ContextValue extends NBBase{
 
     @Column(name = "CONTEXT_RRN")
-    private Long contextRrn;
+    private String contextRrn;
 
     @Column(name="STATUS")
     private String status;

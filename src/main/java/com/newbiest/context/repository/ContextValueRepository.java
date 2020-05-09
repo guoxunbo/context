@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by guoxunbo on 2018/7/6.
  */
 @Repository
-public interface ContextValueRepository extends IRepository<ContextValue, Long>, ContextValueRepositoryCustom {
+public interface ContextValueRepository extends IRepository<ContextValue, String>, ContextValueRepositoryCustom {
 
 
 }

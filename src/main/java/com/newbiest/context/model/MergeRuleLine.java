@@ -18,7 +18,7 @@ public class MergeRuleLine extends NBBase  {
     public static final String COMPARISON_OPERATORS_EQUALS = "Equals";
 
     @Column(name="RULE_RRN")
-    private Long ruleRrn;
+    private String ruleRrn;
 
     /**
      * 栏位名称

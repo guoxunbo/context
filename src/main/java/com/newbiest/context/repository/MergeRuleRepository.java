@@ -5,6 +5,6 @@ import com.newbiest.context.model.MergeRule;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MergeRuleRepository extends IRepository<MergeRule, Long> {
+public interface MergeRuleRepository extends IRepository<MergeRule, String> {
 
 }

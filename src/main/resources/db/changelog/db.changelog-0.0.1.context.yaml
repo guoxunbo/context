@@ -10,8 +10,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: OBJECT_RRN
-                  type: bigint
-                  autoIncrement: true
+                  type: varchar(128)
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -24,7 +23,7 @@ databaseChangeLog:
                   remarks: 数据是否可用
               - column:
                   name: ORG_RRN
-                  type: bigint
+                  type: varchar(128)
                   defaultValueNumeric: 0
                   remarks: 区域号
               - column:

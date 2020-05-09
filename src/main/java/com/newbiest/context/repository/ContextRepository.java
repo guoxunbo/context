@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  * Created by guoxunbo on 2018/7/6.
  */
 @Repository
-public interface ContextRepository extends IRepository<Context, Long> {
+public interface ContextRepository extends IRepository<Context, String> {
 
     Context getByName(String name) throws ClientException;
 
