@@ -30,13 +30,5 @@ public class ContextConfiguration {
         return liquibase;
     }
 
-    @PostConstruct
-    public void init() {
-        // 注册modelClassLoader
-        ModelFactory.registerModelClassLoader(MergeRule.class.getName(), MergeRule.class.getClassLoader());
-        ModelFactory.registerModelClassLoader(MergeRuleLine.class.getName(), MergeRuleLine.class.getClassLoader());
-        ModelFactory.registerModelClassLoader(Context.class.getName(), Context.class.getClassLoader());
-        ModelFactory.registerModelClassLoader(ContextValue.class.getName(), ContextValue.class.getClassLoader());
-    }
 }
 
