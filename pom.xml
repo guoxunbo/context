@@ -13,7 +13,7 @@
 
     <properties>
         <newbiest.framework.version>1.0.6-SNAPSHOT</newbiest.framework.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
