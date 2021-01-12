@@ -1,16 +1,10 @@
 package com.newbiest.common.main;
 
-import com.newbiest.base.factory.ModelFactory;
-import com.newbiest.context.model.Context;
-import com.newbiest.context.model.ContextValue;
-import com.newbiest.context.model.MergeRule;
-import com.newbiest.context.model.MergeRuleLine;
 import liquibase.integration.spring.SpringLiquibase;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 @Slf4j
